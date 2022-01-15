@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopifyBackendChallenge", "ShopifyBackendChallenge\ShopifyBackendChallenge.csproj", "{31CC0EBF-4600-4D0D-B9AC-13F938839D01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31CC0EBF-4600-4D0D-B9AC-13F938839D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CC0EBF-4600-4D0D-B9AC-13F938839D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CC0EBF-4600-4D0D-B9AC-13F938839D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CC0EBF-4600-4D0D-B9AC-13F938839D01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17922988-3A07-4905-8245-B47768ACB373}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,66 @@
+﻿<!--This is the main page, which displays a list of all inventory items-->
+
+@model IEnumerable<ShopifyBackendChallenge.Models.Inventory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Inventory Items</h1>
+
+@{ if (TempData["itemName"] != null) //Only displays if an item was recently deleted. Allows the user to 'undo' their delete.
+    {
+        <p>The Item @TempData["itemName"] was deleted. <a asp-controller="Inventories" asp-action="Undelete" asp-route-id="@TempData["itemId"]">Undo</a> this delete.</p>
+    }
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                In Stock?
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            string stock = "";
+
+            if (item.InStock == true) //displaying a "yes" or "no" for items in stock - easy for user to read
+            {
+                stock = "Yes";
+            }
+            else
+            {
+                stock = "No";
+            }
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemDescription)
+                </td>
+                <td>
+                    @stock
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ItemId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ItemId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
